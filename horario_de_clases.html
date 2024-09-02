@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horario de clase</title>
+    <link rel="stylesheet" href="./Css/estilo.css">
+    <link rel="stylesheet" href="./Css/horario.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+
+    <div class="menuv" id="menuv">
+        <a class="logo" href="./index.html">
+            <img src="https://www.earpunifim.com/public/assets/img/uni_gray_xs.png">
+            <div>
+            <p class="p1">UNI EARPFIM</p>
+            <p class="p2">DOCENTE</p>
+            </div>
+        </a>
+        <ul class="lista">
+            <li><button onclick="subm(event)" id="General"> <span class="material-icons">work</span> General
+                <span class="material-icons flech">keyboard_arrow_down</span></button>
+                <ul class="submenu">
+                    <li><a href="#"><span class="material-icons">school</span> Aula virtual FIM</a></li>
+                    <li><a href="#"><span class="material-icons">account_box</span> Información Docente</a></li>
+
+                    <li><a class="elegido" href=""><span class="material-icons">edit</span> Mi horario de clases</a></li>
+
+                    <li><a href="#"><span class="material-icons">account_balance</span> Mis Cursos Asignados</a></li>
+                    <li><a href="#"><span class="material-icons">book</span> Tutoria Alumnos</a></li>
+                    <li><a href="#"><span class="material-icons">book</span> Asistencia</a></li>
+                    <li><a href="#"><span class="material-icons">link</span> Cargar Notas ORCE</a></li>
+                    <li><a href="#"><span class="material-icons">library_books</span> Biblioteca Virtual</a></li>
+                    <li><a href="#"><span class="material-icons">dashboard</span> Mis Disponibilidad</a></li>
+                    <li><a href="#"><span class="material-icons">fact_check</span> Reclamo del reclamo</a></li>
+                    <li><a href="#"><span class="material-icons">fact_check</span> Corrección de notas</a></li>
+                    <li><a href="#"><span class="material-icons">settings</span> Ayuda en Aula</a></li>
+                    <li><a href="#"><span class="material-icons">school</span> Aula Virtual Titulación</a></li>
+                </ul>
+            </li>
+            <li><button onclick="subm(event)"><span class="material-icons">work</span> Administrador
+                <span class="material-icons flech">keyboard_arrow_down</span></button></li>
+            <li><button onclick="subm(event)"><span class="material-icons">work</span> Acreditación FIM
+                <span class="material-icons flech">keyboard_arrow_down</span></button></li>
+            <li><button onclick="subm(event)"><span class="material-icons">work</span> Virtual
+                <span class="material-icons flech">keyboard_arrow_down</span></button></li>
+            <li><button onclick="subm(event)"><span class="material-icons">work</span> Documentos académicos
+                <span class="material-icons flech">keyboard_arrow_down</span></button></li>
+        </ul>
+    </div>
+
+    <div class="cabeza" id="cabeza">
+        <button onclick="toggleMenu()"><span class="material-icons">menu</span></button>
+        <p>OBREGON RAMOS, MAXIMO</p>
+    </div>
+
+    <div class="contenedor" id="contenedor">
+
+    <div class=" contenido">
+
+        <h1>Horario de clase</h1>
+
+        <div class="select_div">
+            <select name="select" id="select">
+                <option value="20222">20222</option>
+                <option value="20231">20231</option>
+            </select>
+            <P>DEFINITIVO</P>
+        </div>
+
+        <h3>CARGA HORARIA: <span id="CH">0</span> HRS</h3>
+
+        <table class="hora" id="hora">
+            <thead>
+                <td class="cel_horas"> HORA</td>
+                <td>LUNES</td>
+                <td>MARTES</td>
+                <td>MIERCOLES</td>
+                <td>JUEVES</td>
+                <td>VIERNES</td>
+                <td>SABADO</td>
+                <td>DOMINGO</td>
+            </thead>
+            <tr>
+                <td class="cel_horas">07-08</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="cel_horas">08-09</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="cel_horas">09-10</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="cel_horas">10-11</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="cel_horas">11-12</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="cel_horas">12-13</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="cel_horas">13-14</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="cel_horas">14-15</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="cel_horas">15-16</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="cel_horas">16-17</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="cel_horas">17-18</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="cel_horas">18-19</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="cel_horas">19-20</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="cel_horas">20-21</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="cel_horas">21-22</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="cel_horas">22-23</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+
+    </div>
+    </div>
+
+
+    <script src="./Js/horarios/jshora.js"></script>
+    <script src="./Js/funciones.js"></script>
+</body>
+</html>
