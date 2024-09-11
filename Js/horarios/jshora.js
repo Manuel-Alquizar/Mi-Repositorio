@@ -4,6 +4,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
 var horarios = [];
 var celdas = [];
+const horas = ["", "07","08","09","10","11","12","13","14","15","16","17","18","19","20","21","22","23"];
+const dias = ["", "LU","MA","MI","JU","VI","SA","DO"];
 
 document.getElementById("select").addEventListener('change',recopilar_datos);
 
@@ -31,8 +33,6 @@ function recopilar_datos(){
 
 function cal_tabla(){
 
-    const horas = ["", "07","08","09","10","11","12","13","14","15","16","17","18","19","20","21","22","23"];
-    const dias = ["", "LU","MA","MI","JU","VI","SA","DO"];
     let carga = 0;
 
     horarios.forEach(datos =>{

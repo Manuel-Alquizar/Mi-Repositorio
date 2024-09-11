@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
-    boto = document.getElementById("General");
-    subm(boto.click());
+    let boto = document.getElementById("General");
+    boto.click();
 });
     
 function toggleMenu() {

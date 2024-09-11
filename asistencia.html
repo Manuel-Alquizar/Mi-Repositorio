@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UNI | EARPFIM COP</title>
+    <title>Asistencia</title>
     <link rel="stylesheet" href="./Css/estilo.css">
+    <link rel="stylesheet" href="./Css/asistencia.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
@@ -26,7 +27,7 @@
                     <li><a href="./horario_de_clases.html"><span class="material-icons">edit</span> Mi horario de clases</a></li>
                     <li><a href="#"><span class="material-icons">account_balance</span> Mis Cursos Asignados</a></li>
                     <li><a href="#"><span class="material-icons">book</span> Tutoria Alumnos</a></li>
-                    <li><a href="./asistencia.html"><span class="material-icons">book</span> Asistencia</a></li>
+                    <li><a class="elegido" href=""><span class="material-icons">book</span> Asistencia</a></li>
                     <li><a href="#"><span class="material-icons">link</span> Cargar Notas ORCE</a></li>
                     <li><a href="#"><span class="material-icons">library_books</span> Biblioteca Virtual</a></li>
                     <li><a href="#"><span class="material-icons">dashboard</span> Mis Disponibilidad</a></li>
@@ -55,11 +56,34 @@
 
     <div class="contenedor" id="contenedor">
         <div class=" contenido">
-            <h1>Hola</h1>
+
+            <div class="arriba">
+
+                <p>Semestre:</p>
+
+                <select name="select" id="select">
+                    <option value="20222">20222</option>
+                    <option value="20231">20231</option>
+                </select>
+
+                <p>Precione este botón cuando tenga que registrar su entrada y salida de la clase</p>
+                <p>hora<span></span><button>MARCAR MI ASISTENCIA: ENTRADA / SALIDA</button>
+                    Ayuda<span class="material-icons">help_outline</span></p>
+
+                <button>TOMAR ASISTENCIA ALUMNOS</button><br><br>
+                <button>SOLICITAR RECUPERACIÓN / JUSTIFICACIÓN</button><br><br>
+
+                <button>P:PUNTUAL</button> <button>T:TARDANZA(MIN)</button> <button>F:FALTA</button> <button>N.N:N.N</button><br>
+                <button>REPORTE</button>
+
+            </div>
+            <div id="medio" class="medio"></div>
+            <div id="abaj" class="abajo"></div>
         </div>
 
     </div>
 
+    <script src="./Js/asistencia/asis.js"></script>
     <script src="./Js/funciones.js"></script>
 </body>
 </html>

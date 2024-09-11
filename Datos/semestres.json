@@ -1,0 +1,17 @@
+[
+    {
+        "id": 20222,
+        "semestre": "20222",
+        "fecInicio": "xx-08-2022",
+        "fecFinal": "xx-12-2022",
+        "estado": 1
+    },
+
+    {
+        "id": 20231,
+        "semestre": "20231",
+        "fecInicio": "xx-03-2023",
+        "fecFinal": "xx-07-2023",
+        "estado": 1
+    }
+]

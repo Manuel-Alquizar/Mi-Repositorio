@@ -1,0 +1,27 @@
+.contenido{
+    
+}
+
+.arriba{
+    margin:auto;
+    margin-top: 5px;
+    width: 900px;
+    border: solid 1px  black;
+    text-align: center;
+}
+
+.medio{
+    margin:auto;
+    margin-top: 20px;
+    width: 900px;
+    border: solid 1px  black;
+    text-align: center;
+}
+
+.abajo{
+    margin:auto;
+    margin-top: 20px;
+    width: 900px;
+    border: solid 1px  black;
+    text-align: center;
+}
