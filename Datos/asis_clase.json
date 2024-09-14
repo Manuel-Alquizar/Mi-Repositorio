@@ -1,0 +1,82 @@
+[
+    {
+        "semestre": 20222,
+        "agosto": {
+            "dia": ["Martes 20","Martes 20","Miercoles 21","Miercoles 21","Viernes 23","Viernes 23","Viernes 23",
+                "Martes 27","Martes 27","Miercoles 28","Miercoles 28","Viernes 30","Viernes 30","Viernes 30"],
+            "codHorario": [28456, 28459, 28458, 28093, 27921, 27922, 28094, 
+                28456, 28459, 28458, 28093, 27921, 27922, 28094],
+            "entradaH": ["08:00","10:00","08:20","17:00","08:00","09:00","14:00",
+                "08:00","10:00","08:00","17:00","08:00","09:00","14:00"],
+            "salidaH": ["10:00","12:00","11:00","20:00","09:00","11:00","17:00",
+                "10:00","12:00","11:00","20:00","09:00","11:00","17:00"],
+            "asis": ["P","P","T","P","P","P","P","P","P","P","P","P","P","P"]
+        },
+        "setiembre": {
+            "dia": [],
+            "codHorario": [],
+            "entradaH": [],
+            "salidaH": [],
+            "asis": []
+        },
+        "octubre": {
+            "dia": [],
+            "codHorario": [],
+            "entradaH": [],
+            "salidaH": [],
+            "asis": []
+        },
+        "noviembre": {
+            "dia": [],
+            "codHorario": [],
+            "entradaH": [],
+            "salidaH": [],
+            "asis": []
+        },
+        "diciembre": {
+            "dia": [],
+            "codHorario": [],
+            "entradaH": [],
+            "salidaH": [],
+            "asis": []
+        }
+    },
+    {
+        "semestre": 20231,
+        "marzo": {
+            "dia": [],
+            "codHorario": [],
+            "entradaH": [],
+            "salidaH": [],
+            "asis": []
+        },
+        "abril": {
+            "dia": [],
+            "codHorario": [],
+            "entradaH": [],
+            "salidaH": [],
+            "asis": []
+        },
+        "mayo": {
+            "dia": [],
+            "codHorario": [],
+            "entradaH": [],
+            "salidaH": [],
+            "asis": []
+        },
+        "junio": {
+            "dia": [],
+            "codHorario": [],
+            "entradaH": [],
+            "salidaH": [],
+            "asis": []
+        },
+        "julio": {
+            "dia": [],
+            "codHorario": [],
+            "entradaH": [],
+            "salidaH": [],
+            "asis": []
+        }
+    }
+]

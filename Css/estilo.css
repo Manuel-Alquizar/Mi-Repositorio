@@ -179,6 +179,9 @@ button:focus {
     height: 100%;
     transition: 0.4s;
 
+    overflow: auto;
+    scrollbar-width:none;
+
 }
 
 .menu-close {

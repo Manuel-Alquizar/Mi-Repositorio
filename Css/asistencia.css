@@ -1,5 +1,5 @@
 .contenido{
-    
+    margin-bottom: 50px;
 }
 
 .arriba{
@@ -21,7 +21,29 @@
 .abajo{
     margin:auto;
     margin-top: 20px;
+    margin-bottom: 20px;
     width: 900px;
     border: solid 1px  black;
     text-align: center;
+}
+
+.minic{
+    margin:auto;
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    transition: 1s;
+}
+
+.minit{
+    margin: auto;
+    border-collapse: collapse;
+    width: 90%;
+    margin-bottom: 30px;
+}
+
+
+
+.minit tr{
+    border: solid 1px black;
 }
