@@ -59,28 +59,31 @@
 
             <div class="arriba">
 
+                <div class="sele">
                 <p>Semestre:</p>
 
                 <select name="select" id="select">
                     <option value="20222">20222</option>
                     <option value="20231">20231</option>
                 </select>
+                </div>
 
-                <p>Precione este botón cuando tenga que registrar su entrada y salida de la clase</p>
-                <p>hora: <span id="reloj"></span> <button>MARCAR MI ASISTENCIA: ENTRADA / SALIDA</button>
+                <p>Presione este botón solo cuando tenga que registrar su entrada y su salida de clase</p>
+                <p>Hora: <span id="reloj"></span> <button class="BAsi">MARCAR MI ASISTENCIA: ENTRADA / SALIDA</button> 
                     Ayuda<span class="material-icons">help_outline</span></p>
 
-                <button>TOMAR ASISTENCIA ALUMNOS</button><br><br>
-                <button>SOLICITAR RECUPERACIÓN / JUSTIFICACIÓN</button><br><br>
+                <button class="BToAsi">TOMAR ASISTENCIA ALUMNOS</button><br><br>
+                <button class="BSoRe">SOLICITAR RECUPERACIÓN / JUSTIFICACIÓN</button><br><br>
 
-                <button>P:PUNTUAL</button> <button>T:TARDANZA(MIN)</button> <button>F:FALTA</button> <button>N.N:N.N</button><br>
-                <button>REPORTE</button>
+                <button class="Blu">P: PUNTUAL</button> <button class="Blu">T: TARDANZA(MIN)</button> 
+                <button class="Blu">F: FALTA</button> <button class="Blu">N.N : N.N</button><br>
+                <button class="report">REPORTE</button>
 
             </div>
             <div id="medio" class="medio"></div>
             <div id="abaj" class="abajo">
                 <p>resumen de asistencia del semestre</p>
-                <p>P:<span>0</span> T:<span>0</span> F:<span>0</span></p>
+                <p>P:<span id="pun">0</span> T:<span id="tar">0</span> F:<span id="fal">0</span></p>
             </div>
         </div>
 

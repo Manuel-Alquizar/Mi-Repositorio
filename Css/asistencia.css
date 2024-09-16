@@ -1,38 +1,100 @@
 .contenido{
-    margin-bottom: 50px;
+    font-size: 15px;
 }
 
 .arriba{
     margin:auto;
     margin-top: 5px;
     width: 900px;
-    border: solid 1px  black;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
     text-align: center;
+}
+
+.sele{
+    text-align: left;
+    margin-left: 10px;
+}
+
+.sele p{
+    margin-bottom: 10px;
+}
+
+.sele select{
+    width: 120px;
+    height: 25px;
+    padding-left: 5px;
+    color: gray;
+    border-color: gray;
+    border-radius: 3px;
+    
+}
+
+.arriba button{
+    border: none;
+    border-radius: 2px;
+    text-align: center;
+    color: white;
+    min-width: 100px;
+    padding: 10px;
+    font-size: 11px;
+}
+
+.BSoRe{
+    margin-bottom: 10px;
+}
+
+.report{
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.BAsi{background: rgb(53, 166, 92) !important;}
+.BToAsi{background: rgb(255, 129, 0) !important;}
+.BSoRe, .Blu, .report{background: rgb(34, 79, 177) !important;}
+
+.mesboto{
+    width: 900px;
+    text-align: left;
+    border: none;
+    border-radius: 3px;
+    padding: 10px;
+    padding-left: 20px;
+    font-size: 12px;
+    background: rgb(234, 234, 234);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.mesboto:hover{
+    cursor: pointer;
+    background: rgb(34, 79, 177);
+    color: white;
 }
 
 .medio{
     margin:auto;
     margin-top: 20px;
-    width: 900px;
-    border: solid 1px  black;
+    width: 950px;
     text-align: center;
 }
 
 .abajo{
     margin:auto;
     margin-top: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 90px;
     width: 900px;
-    border: solid 1px  black;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    border: solid 1px  white;
     text-align: center;
+    border-radius: 3px;
 }
 
 .minic{
-    margin:auto;
+    margin: auto;
     width: 100%;
     max-height: 0;
     overflow: hidden;
-    transition: 1s;
+    transition: 0.5s ease-out;
 }
 
 .minit{
@@ -42,7 +104,16 @@
     margin-bottom: 30px;
 }
 
-
+.ReAsiMen{
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 900px;
+    border: solid 1px  white;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    border-radius: 3px;
+}
 
 .minit tr{
     border: solid 1px black;
