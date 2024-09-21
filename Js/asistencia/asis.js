@@ -22,7 +22,7 @@ setInterval(actualizarHora, 1000);
 var semestre;
 var asistencia;
 var horarios = [];
-const meses = ["","ENERO","FEBRERO","MARZO","ABRIL","MAYO","JUNIO",
+const meses = ["ENERO","FEBRERO","MARZO","ABRIL","MAYO","JUNIO",
     "JULIO","AGOSTO","SETIEMBRE","OCTUBRE","NOVIEMBRE","DICIEMBRE"];
 
 document.getElementById("select").addEventListener('change',recopilar_datos_asis);
@@ -80,26 +80,29 @@ async function recopilar_datos_asis(){
 
 function mostrar_boto(){
 
-    let mi = Number(semestre.fecInicio.slice(3,5));
-    let mf = Number(semestre.fecFinal.slice(3,5));
+    let mi = Number(semestre.fecInicio.slice(3,5)) -1;
+    let mf = Number(semestre.fecFinal.slice(3,5)) -1;
 
     //Limitar los meses
     let fecha = new Date();
-    let ma = fecha.getMonth()+1;
+    let ma = fecha.getMonth();
     
     mf = (ma<mf) ? ma : mf;
 
     let año = semestre.semestre.slice(0,4);
     let botones = "";
 
-    for(let n = mf; n>=mi; n--){
+    botones += `<div><button id="mesActual" class="mesboto">${meses[mf]} ${año}</button><br><br>
+        <div class="minic"></div></div>`;
+
+    for(let n = (mf-1); n>=mi; n--){
         botones += `<div><button id="mesboto" class="mesboto">${meses[n]} ${año}</button><br><br>
         <div class="minic"></div></div>`;
     }
 
     document.getElementById("medio").innerHTML = botones;
 
-    var bots = document.querySelectorAll("#mesboto");
+    var bots = document.querySelectorAll(".mesboto");
 
     crea_tablas(bots);
 
@@ -127,7 +130,7 @@ function crea_tablas(botones){
         let mes = boton.innerText.slice(0,-5).toLowerCase();
 
         let tabla = `<table class='minit'>
-        <thead>
+        <thead class="cabezaT">
         <td>Día</td>
         <td>Curso</td>
         <td>Horario</td>
@@ -161,7 +164,7 @@ function crea_tablas(botones){
             <td>${codCur}-${secCur} (${teopra})</td>
             <td>${horCur}</td>
             <td>${mesAsis.entradaH[n]} - ${mesAsis.salidaH[n]}</td>
-            <td><span>${mesAsis.asis[n]}<span></td>
+            <td><span id="spanss">${mesAsis.asis[n]}</span></td>
             </tr>\n`+
             filas;
 
@@ -181,6 +184,18 @@ function crea_tablas(botones){
                 <p>P:${puntualM} T:${tardeM} F:${faltaM}</p></div>`;
 
 
+        let spanss = conte.querySelectorAll("#spanss");
+
+        spanss.forEach(spa=>{
+            if(spa.innerText=="P"){
+                spa.style.backgroundColor="rgb(40, 167, 69)";
+            }else if(spa.innerText=="T"){
+                spa.style.backgroundColor="rgb(255, 129, 0)"
+            }else{
+                spa.style.backgroundColor="rgb(255, 50, 50)"
+            }
+        });
+
     });
 
     document.getElementById("pun").innerText = puntualS;
@@ -194,15 +209,89 @@ function mostrar_ocultar(event){
     let conteUp = event.target.parentElement;
     let conte = conteUp.querySelector(".minic");
 
-    if(conte.style.maxHeight == '800px'){
+    if(conte.style.maxHeight == '1000px'){
         conte.style.maxHeight = '0px';
     }else{
-        conte.style.maxHeight = '800px';
+        let todos = document.querySelectorAll(".minic");
+
+        todos.forEach(unConte=>{
+            unConte.style.maxHeight = '0px';
+        });
+        conte.style.maxHeight = '1000px';
     } 
 
 }
 
+const diasCort = ["DO", "LU","MA","MI","JU","VI","SA"];
+const diasSemana = ["Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado"];
+var entrada = true;
+
+document.getElementById("btnAsistencia").addEventListener("click", TomarAsistencia);
+
 function TomarAsistencia(){
+
+    //tener la fecha y hora actual
+    let fecha = new Date();
+    let horas = fecha.getHours();
+    let minutos = fecha.getMinutes();
+
+    let numDia = fecha.getDate();
+    let nombreDia = diasSemana[fecha.getDay()];
+
+    let mesActual = fecha.getMonth();
+    let nombreMes = meses[mesActual].toLowerCase();
+    let mesAsistencia = asistencia[nombreMes];
+
+    //obtener el horario actual
+    let horarioActual = horarios.find(horario => {
+        let entrada = Number(horario.hora.slice(0,2));
+        let dia = diasCort.indexOf(horario.dia);
+
+        let diaValido = (dia == fecha.getDay());
+        let entradaValida = (entrada == horas && minutos >= 0 && minutos < 60) || 
+        (entrada > horas && minutos >= 50 && minutos < 60);
+
+        return entradaValida && diaValido;
+    });
+
+    //llenar los datos
+    if(!horarioActual){
+        alert("No se ha encontrado el horario actual");
+        return;
+    }
+
+    if(entrada){
+        let dia = nombreDia + " " + numDia;
+        let codHor =horarioActual.codHorario;
+        let entradaH = `${horas.toString().padStart(2, '0')}:${minutos.toString().padStart(2, '0')}`;
+        let salidaH = "Aun no se ha salido";
+        let estado = (horas==Number(horarioActual.hora.slice(0,2)) && minutos>5)?
+        "T":"P";
+
+        mesAsistencia.dia.push(dia);
+        mesAsistencia.codHorario.push(codHor);
+        mesAsistencia.entradaH.push(entradaH);
+        mesAsistencia.salidaH.push(salidaH);
+        mesAsistencia.asis.push(estado);
+
+        let botones = document.querySelectorAll("#mesActual");
+
+        crea_tablas(botones);
+
+        entrada = false;
+
+    }else{
+        let salidaH = `${horas.toString().padStart(2, '0')}:${minutos.toString().padStart(2, '0')}`;
+
+        mesAsistencia.salidaH.pop();
+        mesAsistencia.salidaH.push(salidaH);
+
+        let botones = document.querySelectorAll("#mesActual");
+        crea_tablas(botones);
+
+        entrada = true;
+    }
+
 
 }
 
