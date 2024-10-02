@@ -191,7 +191,7 @@ button:focus {
 .contenido{
     margin: auto;
     width: 98%;
-    height: 100%;
+    height: calc(100% - 65px);
     overflow: auto;
     scrollbar-width:none;
     

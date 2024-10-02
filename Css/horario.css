@@ -1,7 +1,7 @@
 .contenido{
     display: grid;
     grid-template-columns: repeat(4,1fr);
-    grid-template-rows: 100px 50px auto 100px;
+    grid-template-rows: 100px 50px auto 50px;
 
 }
 

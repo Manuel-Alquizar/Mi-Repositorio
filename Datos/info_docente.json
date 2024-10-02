@@ -1,0 +1,42 @@
+{
+    "DatosPersonales":{
+        "Apellido_P": "Obregon",
+        "Apellido_M": "Ramos",
+        "Nombres": "Maximo",
+        "Sexo": "Masculino",
+        "Fecha de Nacimiento": "16/02/1975",
+        "DNI": "08161078",
+        "TelefonoFijo": ["5216292","5456454","5310303"],
+        "Celular": ["951629294","999662562"],
+        "RUC": "",
+        "Lib Militar":"",
+        "Brevete":"",
+        "Vehiculo":"",
+        "Estado Civil": "",
+        "FechaMatrimonio": "",
+        "GrupoSanguineo": "-",
+        "Email": ["maximo@uni.edu.pe","maxobregon@gmail.com"]
+    },
+    "LugarNacimiento":{
+        "Pais": "Perú",
+        "Provincia":"01 Lima",
+        "Departamento":"15 Lima",
+        "Distrito":"35 San Martin de Porres"
+    },
+    "Domicilio":{
+        "Pais": "Perú",
+        "DirecExtranjera": "",
+        "Departamento":"15 Lima",
+        "Provincia":"01 Lima",
+        "Distrito":"35 San Martin de Porres",
+        "TipoVia":"",
+        "NombreVia":"",
+        "Tipo":"Mz",
+        "Numero": "F",
+        "TipoZona":"",
+        "NombreZona":""
+    },
+    "GradoAcademico":{
+        
+    }
+}

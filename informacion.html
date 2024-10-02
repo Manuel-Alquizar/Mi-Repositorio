@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informacion-Docente</title>
+    <link rel="stylesheet" href="./Css/estilo.css">
+    <link rel="stylesheet" href="./Css/informacion.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+
+    <div class="menuv" id="menuv">
+        <a class="logo" href="./index.html">
+            <img src="https://www.earpunifim.com/public/assets/img/uni_gray_xs.png">
+            <div>
+            <p class="p1">UNI EARPFIM</p>
+            <p class="p2">DOCENTE</p>
+            </div>
+        </a>
+        <ul class="lista">
+            <li><button onclick="subm(event)" id="General"> <span class="material-icons">work</span> General
+                <span class="material-icons flech">keyboard_arrow_down</span></button>
+                <ul class="submenu">
+                    <li><a href="#"><span class="material-icons">school</span> Aula virtual FIM</a></li>
+                    <li><a class="elegido" href=""><span class="material-icons">account_box</span> Información Docente</a></li>
+                    <li><a href="./horario_de_clases.html"><span class="material-icons">edit</span> Mi horario de clases</a></li>
+                    <li><a href="#"><span class="material-icons">account_balance</span> Mis Cursos Asignados</a></li>
+                    <li><a href="#"><span class="material-icons">book</span> Tutoria Alumnos</a></li>
+                    <li><a href="./asistencia.html"><span class="material-icons">book</span> Asistencia</a></li>
+                    <li><a href="#"><span class="material-icons">link</span> Cargar Notas ORCE</a></li>
+                    <li><a href="#"><span class="material-icons">library_books</span> Biblioteca Virtual</a></li>
+                    <li><a href="#"><span class="material-icons">dashboard</span> Mis Disponibilidad</a></li>
+                    <li><a href="#"><span class="material-icons">fact_check</span> Reclamo del reclamo</a></li>
+                    <li><a href="#"><span class="material-icons">fact_check</span> Corrección de notas</a></li>
+                    <li><a href="#"><span class="material-icons">settings</span> Ayuda en Aula</a></li>
+                    <li><a href="#"><span class="material-icons">school</span> Aula Virtual Titulación</a></li>
+                </ul>
+            </li>
+            <li><button onclick="subm(event)"><span class="material-icons">work</span> Administrador
+                <span class="material-icons flech">keyboard_arrow_down</span></button></li>
+            <li><button onclick="subm(event)"><span class="material-icons">work</span> Acreditación FIM
+                <span class="material-icons flech">keyboard_arrow_down</span></button></li>
+            <li><button onclick="subm(event)"><span class="material-icons">work</span> Virtual
+                <span class="material-icons flech">keyboard_arrow_down</span></button></li>
+            <li><button onclick="subm(event)"><span class="material-icons">work</span> Documentos académicos
+                <span class="material-icons flech">keyboard_arrow_down</span></button></li>
+        </ul>
+    </div>
+
+    <div class="cabeza" id="cabeza">
+        <button onclick="toggleMenu()"><span class="material-icons">menu</span></button>
+        <p>OBREGON RAMOS, MAXIMO</p>
+
+    </div>
+
+    <div class="contenedor" id="contenedor">
+        <div class=" contenido">
+
+            <img class="foto" src="" alt="foto">
+            <p>OBREGON RAMOS, MAXIMO</p>
+            <p>08161078</p>
+            <button>Actualizar</button>
+            <button>Historial</button> <br><br>
+
+            <button id="bo1" class="boPrin">1er</button><button id="bo2" class="boSeg">2do</button>
+            
+            <div class="primer">
+            <h1>1.- DATOS PERSONALES</h2>
+
+            <form>
+                <div class="form-group2">
+                <div class="sexo">
+                <label class="psexo">Sexo</label>
+                <select name="Sexo" id="Sexo" class="isexo">
+                    <option value="Masculino">Masculino</option>
+                    <option value="Femenino">Femenino</option>
+                </select>
+                </div>
+
+                <div class="fechaN">
+                <label class="pfechaN">Fecha Nacimiento</label>
+                <input type="date" name="Fecha Nacimiento" id="Fecha Nacimiento" class="ifechaN">
+                </div>
+                </div>
+
+                <div class="form-group">
+                <label class="pdni">DNI</label>
+                <input type="text" name="DNI" id="DNI" class="idni">
+                </div>
+
+                <div class="form-group">
+                <label class="ptelefonoF">Telefono Fijo</label>
+                <input type="text" name="Telefono Fijo" id="Telefono Fijo" class="itelefonoF">
+                </div>
+
+                <div class="form-group">
+                <label class="pcelular">Celular</label>
+                <input type="text" name="Celular" id="Celular" class="icelular">
+                </div>
+
+                <div class="form-group">
+                <label class="pruc">RUC</label>
+                <input type="text" name="RUC" id="RUC" class="iruc">
+                </div>
+
+                <div class="form-group">
+                <label class="plibM">Lib Militar</label>
+                <input type="text" name="LibMilitar" id="LibMilitar" class="ilibM">
+                </div>
+
+                <div class="form-group">
+                <label class="pbrevete">Brevete y Categoria</label>
+                <input type="text" name="Brevete" id="Brevete" class="ibrevete">
+                </div>
+
+                <div class="form-group">
+                <label class="pvehiculo">Si cuenta con vehiculo, indicar modelo, placa, año, color</label>
+                <input type="text" name="Vehiculo" id="Vehiculo" class="ivehiculo">
+                </div>
+
+                <div class="form-group2 ">
+                    <div class="EstadoC">
+                <label class="pestadoC">Estado Civil</label>
+                <select name="Estado Civil" id="Estado Civil" class="iestadoC">
+                    <option value="Soltero">Soltero</option>
+                    <option value="Casado">Casado</option>
+                    <option value="Divorciado">Divorciado</option>
+                    <option value="Viudo">Viudo</option>
+                </select>
+                </div>
+
+                <div class="fechaM">
+                <label class="pfechaM">Fecha de Matrimonio</label>
+                <input type="date" name="Fecha Matrimonio" id="Fecha Matrimonio" class="ifechaM">
+                </div>
+                </div>
+
+                <div class="form-group">
+                <label class="pgrupoS">Grupo Sanguineo</label>
+                <input type="text" name="GrupoSanguineo" id="GrupoSanguineo" class="igrupoS">
+                </div>
+
+                <div class="form-group">    
+                <label class="pemail">E-mail(s)</label>
+                <input type="text" name="Email" id="Email" class="iemail">
+                </div>
+                <p>hola</p>
+            
+            </form>
+            </div>
+
+
+
+
+
+        </div>
+    </div>
+
+    <!-- <script src="./Js/a.js"></script> -->
+    <script src="./Js/funciones.js"></script>
+</body>
+</html>
