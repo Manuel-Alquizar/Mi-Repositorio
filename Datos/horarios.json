@@ -95,19 +95,6 @@
         "tope": 18,
         "codDocente": 8161078,
         "estado": 1
-    },
-
-    {
-        "codHorario": 28560,
-        "semestre": 20222,
-        "dia": "SA",
-        "hora": "11-12",
-        "codCurso": "MC511",
-        "secCurso": "E",
-        "teopra": "T",
-        "codAula": "A-265",
-        "tope": 18,
-        "codDocente": 8161078,
-        "estado": 1
     }
+
 ]

@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
     recopilar_datos_asis();
-    actualizarHora();
 });
 
 function actualizarHora() {
